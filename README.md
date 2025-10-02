@@ -18,7 +18,7 @@ Ziel dieses Projekts war es, **praktische Erfahrung mit React** zu sammeln und d
 ![Mobile Screenshot](./screenshots/foodora-mobile.png)
 
 ### Video-Demo
-![Video ansehen] (https://youtu.be/hR3RC9aStXQ)
+https://youtu.be/hR3RC9aStXQ
 
 
 ## Features
