@@ -4,7 +4,7 @@ Ein kleiner Lieferdienst mit moderner Webtechnologien
 
 ## Beschreibung
 
-Foodora ist ein kleiner Lieferdienst-Projekt, das ich entwickelt habe um React intensiv zu lernen.
+Foodora ist ein kleines Lieferdienst-Projekt, das ich entwickelt habe um React intensiv zu lernen.
 Es bietet eine **Suchfunktion**, Filteroptionen, eine **Wishlist**, **Checkout-Logik** und ein **responsives Design** für Desktop und Mobile.
 Ziel dieses Projekts war es, **praktische Erfahrung mit React** zu sammeln und die Grundlagen moderner Frontend-Entwicklung besser zu verstehen.
 
