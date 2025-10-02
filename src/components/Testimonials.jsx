@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
-import { useEffect, useState } from "react";
 
 const Testimonials = ({ testimonials }) => {
   return (

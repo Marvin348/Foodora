@@ -1,20 +1,36 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
 import { CartProvider } from "./contexts/CartContext.jsx";
 import { FavoritesProvider } from "./contexts/FavoritesContext.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import CartPage from "./pages/CartPage/CartPage.jsx";
+import CartPage from "./pages/CartPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
+import WishlistPage from "./pages/WishlistPage.jsx";
+import SearchPage from "./pages/SearchPage.jsx";
+import AppLayout from "./components/AppLayout.jsx";
+import HomePage from "./pages/HomePages.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "cart",
-    element: <CartPage />,
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "cart",
+        element: <CartPage />,
+      },
+      {
+        path: "wishlist",
+        element: <WishlistPage />,
+      },
+      {
+        path: "search",
+        element: <SearchPage />,
+      },
+    ],
   },
   {
     path: "*",
@@ -27,7 +43,6 @@ createRoot(document.getElementById("root")).render(
     <CartProvider>
       <FavoritesProvider>
         <RouterProvider router={router} />
-        {/* <App />  Die App muss dann raus, weil es im router ist*/}
       </FavoritesProvider>
     </CartProvider>
   </StrictMode>

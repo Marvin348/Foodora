@@ -8,8 +8,6 @@ export const FavoritesProvider = ({ children }) => {
     return savedFavorites ? JSON.parse(savedFavorites) : [];
   });
 
-  // console.log(favorites);
-
   const togglefavorites = (id) => {
     setFavorites((prev) =>
       prev.includes(id) ? prev.filter((itemId) => itemId !== id) : [...prev, id]
@@ -20,8 +18,12 @@ export const FavoritesProvider = ({ children }) => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 
+  const isFavorite = (id) => favorites.includes(id);
+
   return (
-    <FavoritesContext.Provider value={{ favorites, togglefavorites }}>
+    <FavoritesContext.Provider
+      value={{ favorites, togglefavorites, isFavorite }}
+    >
       {children}
     </FavoritesContext.Provider>
   );

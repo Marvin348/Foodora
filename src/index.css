@@ -10,7 +10,6 @@
   );
   --container-width: 1400px;
   --container-padding: 2rem;
-  --breakpoint-xs: 30rem;
 }
 @layer utilities {
   .container {
@@ -19,18 +18,25 @@
     padding-inline: var(--container-padding);
     overflow: hidden;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .grid-responsive {
+    @apply grid grid-cols-1 gap-8 py-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+  }
+  .search-input {
+    @apply border-b-2 border-gray-300 w-full pb-1 focus:border-b-black focus:outline-none;
+  }
+  .search-button {
+    @apply absolute top-0 right-1 bottom-2;
+  }
+  .overlay {
+    @apply fixed inset-0 bg-black/40 z-50;
+  }
 }
 @layer utilities {
   .bg-primary {
     background-image: var(--gradient-primary);
-  }
-}
-@layer utilities {
-  .bg-hero {
-    background-image: url("/images/backgrounds/hero-bg.png");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
   }
 }
 body {

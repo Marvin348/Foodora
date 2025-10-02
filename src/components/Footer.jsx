@@ -15,7 +15,7 @@ const Footer = () => {
             <div>
               <h3 className="mb-2 font-bold">Aboniere</h3>
               <p>unseren Newsletter</p>
-              <form className="relative w-full mt-2 sm:max-w-[350px]">
+              <form className="relative w-full mt-2">
                 <input type="text" className="w-full p-[0.3rem] rounded-2xl border-0 bg-white text-black focus: outline-0" />
                 <button className="absolute inset-y-0 right-0 bg-accent px-3 rounded-2xl flex items-center justify-center border-0 text-white cursor-pointer" type="submit">
                   <i className="fa-solid fa-magnifying-glass"></i>
@@ -80,11 +80,6 @@ const Footer = () => {
           <div className="">
             <h3 className="mb-2 font-bold">Kontakt</h3>
             <ul className="flex flex-col gap-4 list-none text-white">
-              <li>
-                <a href="#">
-                  <i className="fa-solid fa-envelope"></i> Email
-                </a>
-              </li>
               <li>
                 <a href="#">
                   <i className="fa-solid fa-envelope"></i> Email

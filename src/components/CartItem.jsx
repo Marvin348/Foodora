@@ -6,16 +6,16 @@ const CartItem = ({
   cartPrice,
   cartQuantity,
   cartCategory,
-  removefromCart,
+  removeFromCart,
   addToCart,
   deleteItem,
 }) => {
   return (
-    <div className="flex flex-col gap-2 items-start border-b border-gray-300 py-4 last:border-b-0 sm:flex-row sm:gap-7">
+    <div className="flex flex-col gap-7 items-start border-b border-gray-300 py-4 sm:flex-row last:border-b-0">
       <img
         src={cartImg}
         alt={cartName}
-        className="w-30 h-30  object-cover rounded-2xl sm:w-28 sm:h-auto"
+        className="w-full h-40  object-cover rounded-2xl sx:h-30 sm:size-30"
       />
       <div className="flex flex-col items-start w-full">
         <div className="flex justify-between items-center w-full gap-12">
@@ -32,7 +32,7 @@ const CartItem = ({
           <span className="font-semibold">{cartPrice}€</span>
           <Counter
             value={cartQuantity}
-            onDecreade={() => removefromCart(id)}
+            onDecreade={() => removeFromCart(id)}
             onIncrease={() => addToCart(id)}
           />
         </div>

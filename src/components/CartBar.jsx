@@ -8,7 +8,7 @@ const CartBar = () => {
   return (
     <Link
       to="/cart"
-      className="bg-accent fixed inset-x-8 bottom-2 rounded-full py-2 px-8 flex items-center justify-between text-white z-50 lg:hidden font-bold"
+      className="bg-accent fixed inset-x-8 bottom-2 rounded-full py-2 px-8 flex items-center justify-between text-white z-40 lg:hidden font-bold"
     >
       <div>
         <i className="fa-solid fa-basket-shopping"></i>
